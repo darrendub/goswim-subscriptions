@@ -12,8 +12,8 @@
   grid-template-columns: 200px repeat(6, 1fr [col-start]);
   grid-template-rows: 250px repeat(5, 80px [col-start]);
   justify-items: stretch;
-  border-top: 1px solid $fog;
-  border-left: 1px solid $fog;
+  border-top: 1px solid $cloud;
+  border-left: 1px solid $cloud;
 
   @media only screen and (min-width: 900px) { 
   	display: grid;
@@ -22,11 +22,11 @@
 
 .grid-item {
   text-align: center;
-  border-bottom: 1px solid $fog;
-  border-right: 1px solid $fog;
+  border-bottom: 1px solid $cloud;
+  border-right: 1px solid $cloud;
 }
 
 .grid-row {
-
+	display: flex;
 }
 
