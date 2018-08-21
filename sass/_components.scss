@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------------
+ * Components
+ *------------------------------------------------------------------*/
+
+//--------------------------------------------------------------------
+// Buttons
+//--------------------------------------------------------------------
+
+.button {
+    background-color: $cyan;
+    border: 0;
+    border-radius: 3px;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $type-brandon;
+    font-size: $type-size-md;
+    font-weight: $type-bold;
+    line-height: 1;
+    padding: $unit-xsm $unit-sm;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+//--------------------------------------------------------------------
+// Badges
+//--------------------------------------------------------------------
+
+.badge {
+    font-size: $type-size-sm;
+    font-family: $type-brandon;
+    font-weight: $type-bold;
+    text-transform: uppercase;
+    align-self: center;
+    border-radius: 20px;
+    cursor: default;
+    flex: none;
+    line-height: 1.3;
+    margin: 0 $unit-xsm/2;
+    padding: $unit-xsm/2 $unit-xsm;
+    position: relative;
+}
+
+.badge-pro {
+	background-color: $cloud;
+	color: $slate;
+}
+
+.badge-coach {
+	background-color: $slate;
+	color: $white;
+}

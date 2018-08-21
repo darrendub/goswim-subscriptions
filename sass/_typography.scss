@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------------
+ * Typography
+ *------------------------------------------------------------------*/
+
+.type-xlg {
+  color: $slate;
+  font-family: $type-brandon;
+  font-size: $type-size-xlg;
+  font-weight: $type-bold;
+  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+
+.type-lg {
+  color: $slate;
+  font-family: $type-brandon;
+  font-size: $type-size-lg;
+  font-weight: $type-bold;
+  text-transform: uppercase;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.type-md {
+  color: $slate;
+  font-family: $type-brandon;
+  font-size: $type-size-md;
+  font-weight: $type-bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.type-sm {
+  color: $fog;
+  font-family: $type-brandon;
+  font-size: $type-size-sm;
+  font-weight: $type-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.type-left {
+  text-align: left;
+}
+
+.type-center {
+  text-align: center;
+}
+
+.price-discount {
+  text-decoration: line-through;
+}
