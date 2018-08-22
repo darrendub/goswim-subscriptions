@@ -3,20 +3,27 @@
  *------------------------------------------------------------------*/
 
 .wrapper {
-	margin: $unit-xlg;
+	overflow-y: scroll;
+  	-webkit-overflow-scrolling: touch;
+	margin: $unit-lg 0 $unit-lg $unit-md;
+
+	@media only screen and (min-width: 750px) { 
+		margin: $unit-xlg;
+	}
 	@media only screen and (min-width: 950px) { 
   	margin: $unit-xlg*2;
   }
 }
 .grid-container {
-  grid-template-columns: 200px repeat(6, 1fr [col-start]);
-  grid-template-rows: 250px repeat(5, 80px [col-start]);
-  justify-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
+  grid-template-rows: repeat(12);
   border-top: 1px solid $cloud;
   border-left: 1px solid $cloud;
-
-  @media only screen and (min-width: 900px) { 
-  	display: grid;
+  @media only screen and (min-width: 700px) { 
+  	grid-template-rows: 250px repeat(5, 80px);
+  	grid-template-columns: 250px repeat(6, 1fr);
+  	justify-items: stretch;
   }
 }
 
@@ -28,5 +35,20 @@
 
 .grid-row {
 	display: flex;
+	padding-top: $unit-sm;
+	padding-bottom: $unit-sm;
+	@media only screen and (min-width: 700px) { 
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+.grid-label {
+  	@media only screen and (max-width: 700px) { 
+  		grid-column-start: 1;
+  		grid-column-end: span col6-start;
+  		background-color: $cloud;
+  		padding-top: $unit-xsm;
+		padding-bottom: $unit-xsm;
+  	}
 }
 
