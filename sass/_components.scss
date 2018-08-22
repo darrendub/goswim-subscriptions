@@ -24,10 +24,6 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: $unit-sm;
-
-    @media only screen and (min-width: 700px) { 
-    	margin-bottom: 0;
-    }
 }
 
 //--------------------------------------------------------------------
