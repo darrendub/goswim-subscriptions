@@ -14,13 +14,20 @@
     cursor: pointer;
     display: inline-block;
     font-family: $type-brandon;
-    font-size: $type-size-md;
+    font-size: $type-size-sm;
     font-weight: $type-bold;
     line-height: 1;
     padding: $unit-xsm $unit-sm;
     text-decoration: none;
     vertical-align: middle;
     white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: $unit-sm;
+
+    @media only screen and (min-width: 700px) { 
+    	margin-bottom: 0;
+    }
 }
 
 //--------------------------------------------------------------------

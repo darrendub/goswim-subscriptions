@@ -250,11 +250,15 @@ textarea {
 .type-xlg {
   color: #243137;
   font-family: "Brandon Grotesque", "Verdana", "Geneva", sans-serif;
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: 1.4;
+  line-height: 1.3;
   letter-spacing: 1px; }
+  @media only screen and (min-width: 600px) {
+    .type-xlg {
+      font-size: 30px;
+      line-height: 1.4; } }
 
 .type-lg {
   color: #243137;
@@ -305,13 +309,19 @@ textarea {
   cursor: pointer;
   display: inline-block;
   font-family: "Brandon Grotesque", "Verdana", "Geneva", sans-serif;
-  font-size: 17px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1;
   padding: 8px 16px;
   text-decoration: none;
   vertical-align: middle;
-  white-space: nowrap; }
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px; }
+  @media only screen and (min-width: 700px) {
+    .button {
+      margin-bottom: 0; } }
 
 .badge {
   font-size: 13px;
@@ -342,20 +352,27 @@ textarea {
  * Grid
  *------------------------------------------------------------------*/
 .wrapper {
-  margin: 40px; }
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin: 32px 0 32px 24px; }
+  @media only screen and (min-width: 750px) {
+    .wrapper {
+      margin: 40px; } }
   @media only screen and (min-width: 950px) {
     .wrapper {
       margin: 80px; } }
 
 .grid-container {
-  grid-template-columns: 200px repeat(6, 1fr [col-start]);
-  grid-template-rows: 250px repeat(5, 80px [col-start]);
-  justify-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
+  grid-template-rows: repeat(12);
   border-top: 1px solid #DBDEDF;
   border-left: 1px solid #DBDEDF; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 700px) {
     .grid-container {
-      display: grid; } }
+      grid-template-rows: 250px repeat(5, 80px);
+      grid-template-columns: 250px repeat(6, 1fr);
+      justify-items: stretch; } }
 
 .grid-item {
   text-align: center;
@@ -365,7 +382,21 @@ textarea {
 .grid-row {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px; }
+  @media only screen and (min-width: 700px) {
+    .grid-row {
+      padding-top: 0;
+      padding-bottom: 0; } }
+
+@media only screen and (max-width: 700px) {
+  .grid-label {
+    grid-column-start: 1;
+    grid-column-end: span col6-start;
+    background-color: #DBDEDF;
+    padding-top: 8px;
+    padding-bottom: 8px; } }
 
 /*--------------------------------------------------------------------
  * Shared
