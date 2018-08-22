@@ -287,8 +287,12 @@ textarea {
 .type-center {
   text-align: center; }
 
-.price-discount {
-  text-decoration: line-through; }
+.label {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-left: 16px; }
 
 /*--------------------------------------------------------------------
  * Components
@@ -337,25 +341,40 @@ textarea {
 /*--------------------------------------------------------------------
  * Grid
  *------------------------------------------------------------------*/
-.grid-container {
-  grid-template-columns: 200px 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 250px 80px 80px 80px 80px 80px 80px;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 80px;
-  justify-items: stretch;
-  border: 1px solid #B6BCBE; }
+.wrapper {
+  margin: 40px; }
   @media only screen and (min-width: 950px) {
+    .wrapper {
+      margin: 80px; } }
+
+.grid-container {
+  grid-template-columns: 200px repeat(6, 1fr [col-start]);
+  grid-template-rows: 250px repeat(5, 80px [col-start]);
+  justify-items: stretch;
+  border-top: 1px solid #DBDEDF;
+  border-left: 1px solid #DBDEDF; }
+  @media only screen and (min-width: 900px) {
     .grid-container {
       display: grid; } }
 
 .grid-item {
   text-align: center;
-  border: 1px solid #B6BCBE; }
+  border-bottom: 1px solid #DBDEDF;
+  border-right: 1px solid #DBDEDF; }
+
+.grid-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 /*--------------------------------------------------------------------
  * Shared
  *------------------------------------------------------------------*/
 .check-icon {
   max-width: 20px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }

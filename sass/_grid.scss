@@ -2,25 +2,31 @@
  * Grid
  *------------------------------------------------------------------*/
 
+.wrapper {
+	margin: $unit-xlg;
+	@media only screen and (min-width: 950px) { 
+  	margin: $unit-xlg*2;
+  }
+}
 .grid-container {
-  
-  grid-template-columns: 200px 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 250px 80px 80px 80px 80px 80px 80px;
-  margin-left: $unit-xlg*2;
-  margin-right: $unit-xlg*2;
-  margin-top: $unit-xlg*2;
+  grid-template-columns: 200px repeat(6, 1fr [col-start]);
+  grid-template-rows: 250px repeat(5, 80px [col-start]);
   justify-items: stretch;
-  border: 1px solid $fog;
+  border-top: 1px solid $cloud;
+  border-left: 1px solid $cloud;
 
-  @media only screen and (min-width: 950px) { 
+  @media only screen and (min-width: 900px) { 
   	display: grid;
   }
 }
 
 .grid-item {
   text-align: center;
-  // align-self: center;
-  // border-right: 1px solid $fog;
-  // border-top: 1px solid $fog;
-  border: 1px solid $fog;
+  border-bottom: 1px solid $cloud;
+  border-right: 1px solid $cloud;
 }
+
+.grid-row {
+	display: flex;
+}
+
