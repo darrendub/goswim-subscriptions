@@ -299,8 +299,8 @@ textarea {
   padding-left: 16px; }
   @media only screen and (max-width: 700px) {
     .label {
-      position: -webkit-sticky;
       position: sticky;
+      position: -webkit-sticky;
       left: 0; } }
 
 /*--------------------------------------------------------------------
