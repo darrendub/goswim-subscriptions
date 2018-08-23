@@ -258,7 +258,7 @@ textarea {
   position: sticky;
   position: -webkit-sticky;
   left: 0;
-  z-index: 1; }
+  z-index: 2; }
   @media only screen and (min-width: 600px) {
     .type-xlg {
       font-size: 30px;
@@ -312,7 +312,6 @@ textarea {
   margin-top: 0; }
 
 .new-price {
-  margin-bottom: 8px;
   margin-bottom: 8px; }
 
 /*--------------------------------------------------------------------
@@ -371,9 +370,7 @@ textarea {
   margin: 32px 0 32px 24px; }
   @media only screen and (min-width: 1010px) {
     .wrapper {
-      margin: 32px; }
-      .wrapper:after {
-        display: none; } }
+      margin: 32px; } }
   @media only screen and (min-width: 1137px) {
     .wrapper {
       margin: 40px; } }
@@ -425,3 +422,17 @@ textarea {
   text-align: center;
   margin-left: auto;
   margin-right: auto; }
+
+.fade {
+  width: 100px;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, white, rgba(255, 255, 255, 0)); }
+
+@media only screen and (min-width: 1010px) {
+  .fade {
+    display: none; } }
