@@ -4,12 +4,11 @@
 
 .wrapper {
 	overflow-y: scroll;
-  	-webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
 	margin: $unit-lg 0 $unit-lg $unit-md;
-
 	&:after {
 		content:'';
-  		width:50px;
+  		width:100px;
   		height:100vh;    
   		position:absolute;
   		right:0;
@@ -17,14 +16,14 @@
   		background: linear-gradient(to left,white,rgba(255, 255, 255, 0))
 	}
 
-	@media only screen and (min-width: 750px) { 
-		margin: $unit-xlg;
-		&:after {
-			display: none;
-		}
+	@media only screen and (min-width: 1010px) { 
+		margin: $unit-lg;
+    &:after {
+      display: none;
+    }
 	}
-	@media only screen and (min-width: 950px) { 
-  	margin: $unit-xlg*2;
+	@media only screen and (min-width: 1137px) { 
+  	margin: $unit-xlg;
   }
 }
 .grid-container {
@@ -33,9 +32,9 @@
   grid-template-rows: repeat(12);
   border-top: 1px solid $cloud;
   border-left: 1px solid $cloud;
-  @media only screen and (min-width: 700px) { 
-  	grid-template-rows: 200px repeat(5, 80px);
-  	grid-template-columns: 200px repeat(6, 1fr);
+  @media only screen and (min-width: 1010px) { 
+  	grid-template-rows: 1fr repeat(5, 80px);
+  	grid-template-columns: 150px repeat(6, 1fr);
   	justify-items: stretch;
   }
 }
@@ -50,13 +49,13 @@
 	display: flex;
 	padding-top: $unit-sm;
 	padding-bottom: $unit-sm;
-	@media only screen and (min-width: 700px) { 
+	@media only screen and (min-width: 1010px) { 
 		padding-top: 0;
 		padding-bottom: 0;
 	}
 }
 .grid-label {
-  	@media only screen and (max-width: 700px) { 
+  	@media only screen and (max-width: 1010px) { 
   		grid-column-start: 1;
   		grid-column-end: span col6-start;
   		background-color: $cloud;
