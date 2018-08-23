@@ -366,7 +366,7 @@ textarea {
     content: '';
     width: 100px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     pointer-events: none;
