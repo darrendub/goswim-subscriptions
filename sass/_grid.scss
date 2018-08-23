@@ -6,17 +6,9 @@
 	overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 	margin: $unit-lg 0 $unit-lg $unit-md;
-	// &:after {
-	// 	content:'';
- //  		width:100px;
- //  		height:100vh;    
- //  		position:fixed;
- //  		right:0;
- //  		top:0;
- //      pointer-events: none;
- //  		background: linear-gradient(to left,white,rgba(255, 255, 255, 0))
-	// }
-
+  -webkit-transform: translateZ(0px);
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-perspective: 1000;
 	@media only screen and (min-width: $bp-md) { 
 		margin: $unit-lg;
 	}
