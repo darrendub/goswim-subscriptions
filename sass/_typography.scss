@@ -13,7 +13,8 @@
   position: sticky;
   position: -webkit-sticky;
   left: 0;
-  @media only screen and (min-width: 600px) { 
+  z-index: 1;
+  @media only screen and (min-width: $bp-sm) { 
     font-size: $type-size-xlg;
     line-height: 1.4;
   }
@@ -56,13 +57,14 @@
 }
 
 .label {
+  font-size: $type-size-sm;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   align-self: center;
   padding-left: $unit-sm;
-  @media only screen and (max-width: 700px) { 
-    position: sticky;
-    position: -webkit-sticky;
-    left: 0;
-  }
+  padding-right: $unit-sm;
+  text-align: left;
+  position: sticky;
+  position: -webkit-sticky;
+  left: 0;
 }

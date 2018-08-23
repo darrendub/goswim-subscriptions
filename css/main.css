@@ -257,7 +257,8 @@ textarea {
   letter-spacing: 1px;
   position: sticky;
   position: -webkit-sticky;
-  left: 0; }
+  left: 0;
+  z-index: 1; }
   @media only screen and (min-width: 600px) {
     .type-xlg {
       font-size: 30px;
@@ -295,16 +296,17 @@ textarea {
   text-align: center; }
 
 .label {
+  font-size: 13px;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -ms-flex-item-align: center;
       align-self: center;
-  padding-left: 16px; }
-  @media only screen and (max-width: 700px) {
-    .label {
-      position: sticky;
-      position: -webkit-sticky;
-      left: 0; } }
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: left;
+  position: sticky;
+  position: -webkit-sticky;
+  left: 0; }
 
 /*--------------------------------------------------------------------
  * Components
@@ -326,7 +328,7 @@ textarea {
   white-space: nowrap;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 16px; }
+  margin: 0 16px 16px 16px; }
 
 .badge {
   font-size: 13px;
@@ -362,21 +364,22 @@ textarea {
   margin: 32px 0 32px 24px; }
   .wrapper:after {
     content: '';
-    width: 50px;
+    width: 100px;
     height: 100vh;
     position: absolute;
     right: 0;
     top: 0;
+    pointer-events: none;
     background: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(to left, white, rgba(255, 255, 255, 0)); }
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 1010px) {
     .wrapper {
-      margin: 40px; }
+      margin: 32px; }
       .wrapper:after {
         display: none; } }
-  @media only screen and (min-width: 950px) {
+  @media only screen and (min-width: 1137px) {
     .wrapper {
-      margin: 80px; } }
+      margin: 40px; } }
 
 .grid-container {
   display: grid;
@@ -384,10 +387,10 @@ textarea {
   grid-template-rows: repeat(12);
   border-top: 1px solid #DBDEDF;
   border-left: 1px solid #DBDEDF; }
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 1010px) {
     .grid-container {
-      grid-template-rows: 200px repeat(5, 80px);
-      grid-template-columns: 200px repeat(6, 1fr);
+      grid-template-rows: 1fr repeat(5, 80px);
+      grid-template-columns: 150px repeat(6, 1fr);
       justify-items: stretch; } }
 
 .grid-item {
@@ -401,12 +404,12 @@ textarea {
   display: flex;
   padding-top: 16px;
   padding-bottom: 16px; }
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 1010px) {
     .grid-row {
       padding-top: 0;
       padding-bottom: 0; } }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1010px) {
   .grid-label {
     grid-column-start: 1;
     grid-column-end: span col6-start;
