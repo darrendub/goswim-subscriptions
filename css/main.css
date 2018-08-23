@@ -303,12 +303,10 @@ textarea {
       align-self: center;
   padding-left: 16px;
   padding-right: 16px;
-  text-align: left; }
-  @media only screen and (max-width: 700px) {
-    .label {
-      position: sticky;
-      position: -webkit-sticky;
-      left: 0; } }
+  text-align: left;
+  position: sticky;
+  position: -webkit-sticky;
+  left: 0; }
 
 /*--------------------------------------------------------------------
  * Components
