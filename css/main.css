@@ -300,12 +300,14 @@ textarea {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   padding-left: 16px;
   padding-right: 16px;
   text-align: left;
-  position: sticky;
+  position: -moz-sticky;
   position: -webkit-sticky;
+  position: sticky;
   left: 0; }
 
 .old-price {
@@ -342,6 +344,7 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   border-radius: 20px;
   cursor: default;
@@ -375,15 +378,20 @@ textarea {
       margin: 40px; } }
 
 .grid-container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(6, 150px);
-  grid-template-rows: repeat(12);
+  -ms-grid-columns: (150px)[6];
+      grid-template-columns: repeat(6, 150px);
+  -ms-grid-rows: ()[12];
+      grid-template-rows: repeat(12);
   border-top: 1px solid #DBDEDF;
   border-left: 1px solid #DBDEDF; }
   @media only screen and (min-width: 1010px) {
     .grid-container {
-      grid-template-rows: 1fr repeat(5, 80px);
-      grid-template-columns: 150px repeat(6, 1fr);
+      -ms-grid-rows: 1fr (80px)[5];
+          grid-template-rows: 1fr repeat(5, 80px);
+      -ms-grid-columns: 150px (1fr)[6];
+          grid-template-columns: 150px repeat(6, 1fr);
       justify-items: stretch; } }
 
 .grid-item {
@@ -404,7 +412,9 @@ textarea {
 
 @media only screen and (max-width: 1010px) {
   .grid-label {
-    grid-column-start: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: col6-start;
     grid-column-end: span col6-start;
     background-color: #DBDEDF;
     padding-top: 8px;
@@ -417,6 +427,7 @@ textarea {
   max-width: 20px;
   vertical-align: middle;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   text-align: center;
   margin-left: auto;
