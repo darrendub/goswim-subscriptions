@@ -13,7 +13,7 @@
   position: sticky;
   position: -webkit-sticky;
   left: 0;
-  z-index: 1;
+  z-index: $z-2;
   @media only screen and (min-width: $bp-sm) { 
     font-size: $type-size-xlg;
     line-height: 1.4;

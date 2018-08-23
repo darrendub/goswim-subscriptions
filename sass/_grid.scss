@@ -19,9 +19,6 @@
 
 	@media only screen and (min-width: $bp-md) { 
 		margin: $unit-lg;
-    &:after {
-      display: none;
-    }
 	}
 	@media only screen and (min-width: 1137px) { 
   	margin: $unit-xlg;
