@@ -258,11 +258,15 @@ textarea {
   position: sticky;
   position: -webkit-sticky;
   left: 0;
-  z-index: 20; }
+  z-index: 20;
+  margin-top: 32px; }
   @media only screen and (min-width: 600px) {
     .type-xlg {
       font-size: 30px;
       line-height: 1.4; } }
+  @media only screen and (min-width: 1137px) {
+    .type-xlg {
+      margin-top: 40px; } }
 
 .type-lg {
   color: #243137;
@@ -309,9 +313,6 @@ textarea {
   position: -webkit-sticky;
   position: sticky;
   left: 0; }
-
-.old-price {
-  margin-top: 0; }
 
 .new-price {
   margin-bottom: 8px; }
