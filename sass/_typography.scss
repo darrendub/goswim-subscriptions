@@ -14,9 +14,13 @@
   position: -webkit-sticky;
   left: 0;
   z-index: $z-2;
+  margin-top: $unit-lg;
   @media only screen and (min-width: $bp-sm) { 
     font-size: $type-size-xlg;
     line-height: 1.4;
+  }
+  @media only screen and (min-width: 1137px) { 
+    margin-top: $unit-xlg;
   }
 }
 
@@ -70,9 +74,6 @@
   left: 0;
 }
 
-.old-price {
-  margin-top: 0;
-}
 .new-price {
   margin-bottom: $unit-xsm;
   
