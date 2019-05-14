@@ -258,7 +258,7 @@ textarea {
   left: 0;
   z-index: 20;
   margin-top: 32px; }
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 640px) {
     .type-xlg {
       font-size: 30px;
       line-height: 1.4; } }
@@ -365,13 +365,10 @@ textarea {
 .wrapper {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  margin: 32px 0 32px 24px;
+  margin: 32px;
   -webkit-transform: translateZ(0px);
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-perspective: 1000; }
-  @media only screen and (min-width: 1010px) {
-    .wrapper {
-      margin: 32px; } }
   @media only screen and (min-width: 1137px) {
     .wrapper {
       margin: 40px; } }
@@ -379,16 +376,14 @@ textarea {
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (150px)[3];
-  grid-template-columns: repeat(3, 150px);
-  -ms-grid-rows: ()[12];
-  grid-template-rows: repeat(12);
+  -ms-grid-columns: (150px)[2];
+  grid-template-columns: repeat(2, 150px);
   border-top: 1px solid #DBDEDF;
   border-left: 1px solid #DBDEDF; }
-  @media only screen and (min-width: 1010px) {
+  @media only screen and (min-width: 640px) {
     .grid-container {
-      -ms-grid-rows: 1fr (80px)[5];
-      grid-template-rows: 1fr repeat(5, 80px);
+      -ms-grid-rows: 1fr (80px)[4];
+      grid-template-rows: 1fr repeat(4, 80px);
       -ms-grid-columns: 150px (1fr)[3];
       grid-template-columns: 150px repeat(3, 1fr);
       justify-items: stretch; } }
@@ -404,12 +399,12 @@ textarea {
   display: flex;
   padding-top: 16px;
   padding-bottom: 16px; }
-  @media only screen and (min-width: 1010px) {
+  @media only screen and (min-width: 640px) {
     .grid-row {
       padding-top: 0;
       padding-bottom: 0; } }
 
-@media only screen and (max-width: 1010px) {
+@media only screen and (max-width: 640px) {
   .grid-label {
     -ms-grid-column: 1;
         grid-column-start: 1;
@@ -442,6 +437,6 @@ textarea {
   background: -webkit-linear-gradient(right, white, rgba(255, 255, 255, 0));
   background: linear-gradient(to left, white, rgba(255, 255, 255, 0)); }
 
-@media only screen and (min-width: 1010px) {
+@media only screen and (min-width: 640px) {
   .fade {
     display: none; } }

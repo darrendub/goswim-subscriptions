@@ -21,7 +21,7 @@
 	background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
 }
 
-@media only screen and (min-width: $bp-md) { 
+@media only screen and (min-width: $bp-sm) { 
 	.fade{
 		display: none;
 	}
