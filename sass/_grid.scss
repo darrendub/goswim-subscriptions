@@ -18,13 +18,13 @@
 }
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 150px);
+  grid-template-columns: repeat(3, 150px);
   grid-template-rows: repeat(12);
   border-top: 1px solid $cloud;
   border-left: 1px solid $cloud;
   @media only screen and (min-width: $bp-md) { 
   	grid-template-rows: 1fr repeat(5, 80px);
-  	grid-template-columns: 150px repeat(6, 1fr);
+  	grid-template-columns: 150px repeat(3, 1fr);
   	justify-items: stretch;
   }
 }

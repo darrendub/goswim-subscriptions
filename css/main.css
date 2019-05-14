@@ -40,8 +40,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -196,8 +195,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -303,9 +301,9 @@ textarea {
   font-size: 13px;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -webkit-align-self: center;
+              -ms-grid-row-align: center;
+          align-self: center;
   padding-left: 16px;
   padding-right: 16px;
   text-align: left;
@@ -344,9 +342,9 @@ textarea {
   font-family: "Brandon Grotesque", "Verdana", "Geneva", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -webkit-align-self: center;
+              -ms-grid-row-align: center;
+          align-self: center;
   border-radius: 20px;
   cursor: default;
   line-height: 1.3;
@@ -381,18 +379,18 @@ textarea {
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (150px)[6];
-      grid-template-columns: repeat(6, 150px);
+  -ms-grid-columns: (150px)[3];
+  grid-template-columns: repeat(3, 150px);
   -ms-grid-rows: ()[12];
-      grid-template-rows: repeat(12);
+  grid-template-rows: repeat(12);
   border-top: 1px solid #DBDEDF;
   border-left: 1px solid #DBDEDF; }
   @media only screen and (min-width: 1010px) {
     .grid-container {
       -ms-grid-rows: 1fr (80px)[5];
-          grid-template-rows: 1fr repeat(5, 80px);
-      -ms-grid-columns: 150px (1fr)[6];
-          grid-template-columns: 150px repeat(6, 1fr);
+      grid-template-rows: 1fr repeat(5, 80px);
+      -ms-grid-columns: 150px (1fr)[3];
+      grid-template-columns: 150px repeat(3, 1fr);
       justify-items: stretch; } }
 
 .grid-item {
@@ -402,7 +400,7 @@ textarea {
 
 .grid-row {
   display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   padding-top: 16px;
   padding-bottom: 16px; }
@@ -427,9 +425,9 @@ textarea {
 .check-icon {
   max-width: 20px;
   vertical-align: middle;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -webkit-align-self: center;
+              -ms-grid-row-align: center;
+          align-self: center;
   text-align: center;
   margin-left: auto;
   margin-right: auto; }
@@ -441,7 +439,7 @@ textarea {
   right: 0;
   pointer-events: none;
   z-index: 10;
-  background: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(right, white, rgba(255, 255, 255, 0));
   background: linear-gradient(to left, white, rgba(255, 255, 255, 0)); }
 
 @media only screen and (min-width: 1010px) {
