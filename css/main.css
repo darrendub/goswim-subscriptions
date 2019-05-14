@@ -258,7 +258,7 @@ textarea {
   left: 0;
   z-index: 20;
   margin-top: 32px; }
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 640px) {
     .type-xlg {
       font-size: 30px;
       line-height: 1.4; } }
@@ -363,15 +363,7 @@ textarea {
  * Grid
  *------------------------------------------------------------------*/
 .wrapper {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  margin: 32px 0 32px 24px;
-  -webkit-transform: translateZ(0px);
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-perspective: 1000; }
-  @media only screen and (min-width: 1010px) {
-    .wrapper {
-      margin: 32px; } }
+  margin: 32px; }
   @media only screen and (min-width: 1137px) {
     .wrapper {
       margin: 40px; } }
@@ -379,16 +371,14 @@ textarea {
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (150px)[3];
-  grid-template-columns: repeat(3, 150px);
-  -ms-grid-rows: ()[12];
-  grid-template-rows: repeat(12);
+  -ms-grid-columns: (150px)[2];
+  grid-template-columns: repeat(2, 150px);
   border-top: 1px solid #DBDEDF;
   border-left: 1px solid #DBDEDF; }
-  @media only screen and (min-width: 1010px) {
+  @media only screen and (min-width: 640px) {
     .grid-container {
-      -ms-grid-rows: 1fr (80px)[5];
-      grid-template-rows: 1fr repeat(5, 80px);
+      -ms-grid-rows: 1fr (80px)[4];
+      grid-template-rows: 1fr repeat(4, 80px);
       -ms-grid-columns: 150px (1fr)[3];
       grid-template-columns: 150px repeat(3, 1fr);
       justify-items: stretch; } }
@@ -404,17 +394,17 @@ textarea {
   display: flex;
   padding-top: 16px;
   padding-bottom: 16px; }
-  @media only screen and (min-width: 1010px) {
+  @media only screen and (min-width: 640px) {
     .grid-row {
       padding-top: 0;
       padding-bottom: 0; } }
 
-@media only screen and (max-width: 1010px) {
+@media only screen and (max-width: 640px) {
   .grid-label {
     -ms-grid-column: 1;
         grid-column-start: 1;
-    -ms-grid-column-span: col6-start;
-    grid-column-end: span col6-start;
+    -ms-grid-column-span: col3-start;
+    grid-column-end: span col3-start;
     background-color: #DBDEDF;
     padding-top: 8px;
     padding-bottom: 8px; } }
@@ -431,17 +421,3 @@ textarea {
   text-align: center;
   margin-left: auto;
   margin-right: auto; }
-
-.fade {
-  width: 100px;
-  height: 100vh;
-  position: absolute;
-  right: 0;
-  pointer-events: none;
-  z-index: 10;
-  background: -webkit-linear-gradient(right, white, rgba(255, 255, 255, 0));
-  background: linear-gradient(to left, white, rgba(255, 255, 255, 0)); }
-
-@media only screen and (min-width: 1010px) {
-  .fade {
-    display: none; } }
